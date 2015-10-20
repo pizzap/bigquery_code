@@ -1,0 +1,37 @@
+SELECT
+uid,
+date,
+device,
+hitnum,
+hit,
+referral,
+source,
+mdm,
+keyword,
+landpg,
+goalpg,
+-- off.jyoho_syuto_kubi as jyohosyutokubi,
+off.satei_hanbai_kubun as kubun,
+off.shihyo_daibunrui_name as shihyo_daibunrui,
+off.shihyo_syobunrui_name as shihyo_syobunrui,
+off.baitai_daibunrui_name as daibunrui_name,
+off.baitai_syobunrui_name as baitai,
+off.tododuken as tododuken,
+off.shikucyoson as shikucyoson,
+off.syodan_kubun as syodan_kubun,
+off.uketsuke_kubun as uketsuke_kubun,
+off.tenpo_name as tenpo,
+off.syodansu_kaitori as syodansu_kaitori,
+off.syodansu_hanbai as syodansu_hanbai,
+off.seiyakusu_kaitori as seiyakusu_kaitori,
+off.seiyakusu_hanbai as seiyakusu_hanbai,
+off.jiki_name as jiki,
+off.doki_name as doki,
+off.seibetsu as seibetsu,
+off.nenrei as nenrei,
+off.kokyaku_tododufuken as kokyaku_todofuken,
+off.kokyaku_shikucyoson as kokyaku_shikucyoson
+FROM [kishita_risu.ga_GAID_Cardata] 
+JOIN EACH [informationbiz.20150617]  as off
+ON carno = off.car_no
+;
